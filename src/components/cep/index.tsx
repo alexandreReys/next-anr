@@ -8,13 +8,13 @@ export default function Team() {
     <>
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Cep</h1>
         </div>
       </header>
       <main className="mx-auto">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <h1 className='font-bold'>
-            Dashboard Team - Test Form
+            Cep
           </h1>
 
           <form onSubmit={handleSubmit(handleFormSubmit)} className="max-w-md">
