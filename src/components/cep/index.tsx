@@ -31,7 +31,7 @@ export default function Team() {
             {errors.address?.district?.message && (<p className={errorMsgStyles}>{errors.address?.district?.message}</p>)}
 
             <input {...register('address.complement')} className={inputStyles} type="text" placeholder='Complemento' />
-            {errors.address?.complement?.message && (<p className={errorMsgStyles}>{errors.address?.Complement?.message}</p>)}
+            {errors.address?.complement?.message && (<p className={errorMsgStyles}>{errors.address?.complement?.message}</p>)}
 
             <input {...register('address.city')} className={inputStyles} type="text" placeholder='Cidade' />
             {errors.address?.city?.message && (<p className={errorMsgStyles}>{errors.address?.city?.message}</p>)}
