@@ -34,15 +34,27 @@ export default function Nav() {
                   <div className="ml-10 flex items-baseline space-x-4">
                     
                     <Link href="/Dashboard">
-                      <span className="text-yellow-500 bg-black  hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">D A S H B O A R D</span>
+                      <span className="text-yellow-500 bg-black  hover:bg-gray-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        D A S H B O A R D
+                      </span>
                     </Link>
 
                     <Link href="/Cep">
-                      <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Cep</span>
+                      <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                        Cep
+                      </span>
                     </Link>
 
                     <Link href="/Projects">
-                    <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projetos</span>
+                    <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Projetos
+                    </span>
+                    </Link>
+
+                    <Link href="/Team">
+                    <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Time
+                    </span>
                     </Link>
                   </div>
                 </div>
