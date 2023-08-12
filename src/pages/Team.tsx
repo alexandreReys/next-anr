@@ -1,18 +1,27 @@
+import Head from 'next/head'
+import { parseCookies } from 'nookies'
+import { GetServerSideProps } from 'next'
+import { getAPIClient } from '../services/axios'
+import TeamContent from '../components/TeamContent'
+import Nav from '../components/nav'
+
 export default function Team() {
   return (
-    <>
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-        </div>
-      </header>
-      <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <h1>
-            Dashboard Team
-          </h1>
-        </div>
-      </main>
-    </>
+    <div>
+      <Head>
+        <title>Team</title>
+      </Head>
+      <Nav />
+      <TeamContent />
+    </div>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const apiClient = getAPIClient(ctx);
+  const { 'nextauth.token': token } = parseCookies(ctx);
+  if (!token) {
+    return {redirect: {destination: '/',permanent: false,}}
+  }
+  return {props: {}}
 }
