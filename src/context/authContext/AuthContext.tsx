@@ -1,30 +1,15 @@
 import { createContext, useEffect, useState } from "react";
-import { recoverUserInformation, signInRequest } from "../services/auth";
+import { recoverUserInformation, signInRequest } from "../../services/auth";
 import Router from 'next/router'
 
 import { setCookie, parseCookies } from 'nookies';
-import { api } from "../services/api";
-
-type User = {
-  email: string;
-  password: string;
-  avatar_url: string;
-};
-
-type SignInData = {
-  email: string;
-  password: string;
-};
-
-type AuthContextType = {
-  isAuthenticated: boolean;
-  user: User,
-  signIn: (data: SignInData) => Promise<void>
-}
+import { api } from "../../services/api";
+import { User, SignInData, AuthContextType } from '@/context/authContext/types';
+import { ChildrenProps } from '@/types/types';
 
 export const AuthContext = createContext({} as AuthContextType);
 
-export function AuthProvider({ children }) {
+export function AuthProvider({ children }: ChildrenProps) {
   const [user, setUser] = useState<User | null>(null);
 
   const isAuthenticated = !!user;
