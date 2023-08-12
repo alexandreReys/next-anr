@@ -16,6 +16,7 @@ export async function signInRequest(data: SignInRequestData) {
       name: 'Alexandre Nunes Reys',
       email: 'anr.alexandre@gmail.com',
       avatar_url: 'https://github.com/alexandreReys.png',
+      password: '',
     }
   }
 }
@@ -28,6 +29,7 @@ export async function recoverUserInformation() {
       name: 'Alexandre Nunes Reys',
       email: 'anr.alexandre@gmail.com',
       avatar_url: 'https://github.com/alexandreReys.png',
+      password: '',
     }
   }
 }

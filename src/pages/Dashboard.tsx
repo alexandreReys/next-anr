@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { parseCookies } from 'nookies'
-import { AuthContext } from '../context/AuthContext'
+import { AuthContext } from '../context/authContext/AuthContext'
 import { api } from '../services/api'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
@@ -13,7 +13,9 @@ import Cep from '../components/cep'
 const navigation = ['Dashboard', 'Cep', 'Projects', 'Calendar', 'Reports']
 const profile = ['Your Profile', 'Settings']
 
-function classNames(...classes) {
+type ClassValue = string | undefined | null;
+
+function classNames(...classes: ClassValue[]): string {
   return classes.filter(Boolean).join(' ')
 }
 
