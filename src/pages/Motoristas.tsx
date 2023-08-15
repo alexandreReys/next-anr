@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
-import TeamContent from '../components/TeamContent'
+import TeamContent from '../components/Motoristas'
 import Nav from '../components/nav'
 
 export default function Team() {

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
-import DashboardContent from '../components/ProjetosContent'
+import CargasContent from '../components/Cargas'
 import Nav from '../components/nav'
 
 export default function Projects() {
@@ -12,7 +12,7 @@ export default function Projects() {
         <title>Projects</title>
       </Head>
       <Nav />
-      <DashboardContent />
+      <CargasContent />
     </div>
   )
 }

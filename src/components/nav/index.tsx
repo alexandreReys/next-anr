@@ -45,15 +45,22 @@ export default function Nav() {
                       </span>
                     </Link>
 
-                    <Link href="/Projects">
+
+                    <Link href="/Motoristas">
                     <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                      Projetos
+                      Motoristas
                     </span>
                     </Link>
 
-                    <Link href="/Team">
+                    <Link href="/Veiculos">
                     <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                      Time
+                      Veiculos
+                    </span>
+                    </Link>
+
+                    <Link href="/Cargas">
+                    <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                      Cargas
                     </span>
                     </Link>
                   </div>

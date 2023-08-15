@@ -2,17 +2,17 @@ import Head from 'next/head'
 import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
+import ProjectContent from '../components/Veiculos'
 import Nav from '../components/nav'
-import Cep from '../components/cep'
 
-export default function Dashboard() {
+export default function Projects() {
   return (
     <div>
       <Head>
-        <title>Dashboard</title>
+        <title>Projects</title>
       </Head>
       <Nav />
-      <Cep />
+      <ProjectContent />
     </div>
   )
 }
