@@ -21,8 +21,8 @@ export default function Cargas() {
         <div className="max-w-7xl mx-auto pb-6 pt-2 px-4 sm:px-6 lg:px-8">
           <form onSubmit={handleFormSubmit} className="max-w-full">
             
-            <label htmlFor="codigo" className={labelStyles}>Codigo:</label>
-            <input id="codigo" name="codigo" className={inputCodeStyles} type="text" />
+            <label htmlFor="numero" className={labelStyles}>Numero:</label>
+            <input id="numero" name="numero" className={inputCodeStyles} type="text" />
 
             <div className="flex gap-4">
               <div className="flex-1">
@@ -84,16 +84,6 @@ export default function Cargas() {
 
             <div className="flex gap-4">
               <div className="flex-1">
-                <label htmlFor="chaveNFe" className={labelStyles}>Chave NFe:</label>
-                <input id="chaveNFe" name="chaveNFe" className={inputStyles} type="text" />
-              </div>
-              
-              <div className="flex-1">
-                <label htmlFor="chaveCTe" className={labelStyles}>Chave CTe.:</label>
-                <input id="chaveCTe" name="chaveCTe" className={inputStyles} type="text" />
-              </div>
-              
-              <div className="flex-1">
                 <label htmlFor="status" className={labelStyles}>Status:</label>
                 <input id="status" name="status" className={inputStyles} type="text" />
               </div>
@@ -101,6 +91,75 @@ export default function Cargas() {
 
             <label htmlFor="observacoes" className={labelStyles}>Observações:</label>
             <input id="observacoes" name="observacoes" className={inputStyles} type="text" />
+
+
+            <h1 className="text-2xl text-gray-500 mt-4 mb-2 border-b w-full"><strong>Pedidos</strong></h1>
+
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <label htmlFor="pedido" className={labelStyles}>Pedido:</label>
+                <input id="pedido" name="pedido" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="destinatario" className={labelStyles}>Destinatario:</label>
+                <input id="destinatario" name="destinatario" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="chaveNFe" className={labelStyles}>Chave NFe:</label>
+                <input id="chaveNFe" name="chaveNFe" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="chaveCTe" className={labelStyles}>Chave CTe.:</label>
+                <input id="chaveCTe" name="chaveCTe" className={inputStyles} type="text" />
+              </div>              
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <label htmlFor="pedido" className={labelStyles}>Pedido:</label>
+                <input id="pedido" name="pedido" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="destinatario" className={labelStyles}>Destinatario:</label>
+                <input id="destinatario" name="destinatario" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="chaveNFe" className={labelStyles}>Chave NFe:</label>
+                <input id="chaveNFe" name="chaveNFe" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="chaveCTe" className={labelStyles}>Chave CTe.:</label>
+                <input id="chaveCTe" name="chaveCTe" className={inputStyles} type="text" />
+              </div>              
+            </div>
+
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <label htmlFor="pedido" className={labelStyles}>Pedido:</label>
+                <input id="pedido" name="pedido" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="destinatario" className={labelStyles}>Destinatario:</label>
+                <input id="destinatario" name="destinatario" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="chaveNFe" className={labelStyles}>Chave NFe:</label>
+                <input id="chaveNFe" name="chaveNFe" className={inputStyles} type="text" />
+              </div>
+
+              <div className="flex-1">
+                <label htmlFor="chaveCTe" className={labelStyles}>Chave CTe.:</label>
+                <input id="chaveCTe" name="chaveCTe" className={inputStyles} type="text" />
+              </div>              
+            </div>
 
             <button type="submit" className={buttonStyles}>Enviar</button>
           </form>
