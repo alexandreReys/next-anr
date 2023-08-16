@@ -2,17 +2,17 @@ import Head from 'next/head'
 import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
-import DashboardContent from '../components/Dashboard'
+import CargasContent from '../components/Cargas'
 import Nav from '../components/nav'
 
-export default function Dashboard() {
+export default function Projects() {
   return (
     <div>
       <Head>
-        <title>Dashboard</title>
+        <title>Projects</title>
       </Head>
       <Nav />
-      <DashboardContent />
+      <CargasContent />
     </div>
   )
 }
