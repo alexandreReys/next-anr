@@ -2,8 +2,8 @@ import Head from 'next/head'
 import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
-import DashboardContent from '../components/Dashboard'
 import Nav from '../components/nav'
+import Cep from '../components/cep'
 
 export default function Dashboard() {
   return (
@@ -12,7 +12,7 @@ export default function Dashboard() {
         <title>Dashboard</title>
       </Head>
       <Nav />
-      <DashboardContent />
+      <Cep />
     </div>
   )
 }

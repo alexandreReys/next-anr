@@ -1,4 +1,4 @@
-export default function DashboardContent() {
+export default function Dashboard() {
   return (
     <>
       <header className="bg-white shadow">
