@@ -3,8 +3,8 @@ const inputCodeStyles = 'flex w-36 border border-gray-500 px-2 py-1 rounded';
 const buttonStyles = 'flex w-full justify-center text-white bg-blue-600 p-3 rounded font-bold mt-6';
 const labelStyles = 'w-30 inline-block mt-2';
 
-export default function Motoristas() {
 
+export default function Motoristas() {
   const handleFormSubmit = (data: any) => {
     console.log(data);
   };
