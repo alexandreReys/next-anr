@@ -15,12 +15,138 @@ function classNames(...classes: ClassValue[]): string {
 export default function Nav() {
   const { user } = useContext(AuthContext);
 
+  const DropdownMotoristas = () => {
+    return(
+      <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            Motoristas
+          </Menu.Button>
+        </div>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+            <Menu.Item>
+              <Link href="/MotoristasLista">
+                <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  Cadastro
+                </span>
+              </Link>
+            </Menu.Item>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    )
+  }
+
+  const DropdownVeiculos = () => {
+    return(
+      <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            Veiculos
+          </Menu.Button>
+        </div>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+            <Menu.Item>
+              <Link href="/VeiculosLista">
+                <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  Cadastro
+                </span>
+              </Link>
+            </Menu.Item>
+          </Menu.Items>
+        </Transition>
+      </Menu>
+    )
+  }
+
+  const DropdownCargas = () => {
+    return(
+      <Menu as="div" className="relative inline-block text-left">
+      <div>
+        <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+          Cargas
+        </Menu.Button>
+      </div>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+          <Menu.Item>
+            <Link href="/CargasLista">
+              <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                Cadastro
+              </span>
+            </Link>
+          </Menu.Item>
+        </Menu.Items>
+      </Transition>
+    </Menu>
+    )
+  }
+
+  const DropdownRelatorios = () => {
+    return(
+      <Menu as="div" className="relative inline-block text-left">
+        <div>
+          <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+            Relatórios
+          </Menu.Button>
+        </div>
+        <Transition
+          as={Fragment}
+          enter="transition ease-out duration-100"
+          enterFrom="transform opacity-0 scale-95"
+          enterTo="transform opacity-100 scale-100"
+          leave="transition ease-in duration-75"
+          leaveFrom="transform opacity-100 scale-100"
+          leaveTo="transform opacity-0 scale-95"
+        >
+          <Menu.Items className="origin-top-right absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+            <Menu.Item>
+              <Link href="/RelatViagensRecentes">
+                <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  Viagens recentes
+                </span>
+              </Link>
+            </Menu.Item>
+          </Menu.Items>
+        </Transition>
+    </Menu>
+    )
+  }
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
+
+              {/* DESKTOP MENU */}
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                   <img
@@ -44,129 +170,19 @@ export default function Nav() {
                       </span>
                     </Link> */}
 
-                    {/* Dropdown de Motoristas */}
-                    <Menu as="div" className="relative inline-block text-left">
-                      <div>
-                        <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          Motoristas
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                          <Menu.Item>
-                            <Link href="/MotoristasLista">
-                              <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                Cadastro
-                              </span>
-                            </Link>
-                          </Menu.Item>
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
+                    <DropdownMotoristas />
 
+                    <DropdownVeiculos />
 
-                    {/* Dropdown de Veiculos */}
-                    <Menu as="div" className="relative inline-block text-left">
-                      <div>
-                        <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          Veiculos
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                          <Menu.Item>
-                            <Link href="/VeiculosLista">
-                              <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                Cadastro
-                              </span>
-                            </Link>
-                          </Menu.Item>
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
+                    <DropdownCargas />
 
-                    {/* Dropdown de Cargas */}
-                    <Menu as="div" className="relative inline-block text-left">
-                      <div>
-                        <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          Cargas
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                          <Menu.Item>
-                            <Link href="/CargasLista">
-                              <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                Cadastro
-                              </span>
-                            </Link>
-                          </Menu.Item>
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
-
-
-                    {/* Dropdown de Relatorios */}
-                    <Menu as="div" className="relative inline-block text-left">
-                      <div>
-                        <Menu.Button className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                          Relatórios
-                        </Menu.Button>
-                      </div>
-                      <Transition
-                        as={Fragment}
-                        enter="transition ease-out duration-100"
-                        enterFrom="transform opacity-0 scale-95"
-                        enterTo="transform opacity-100 scale-100"
-                        leave="transition ease-in duration-75"
-                        leaveFrom="transform opacity-100 scale-100"
-                        leaveTo="transform opacity-0 scale-95"
-                      >
-                        <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                          <Menu.Item>
-                            <Link href="/RelatViagensRecentes">
-                              <span className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                                Viagens recentes
-                              </span>
-                            </Link>
-                          </Menu.Item>
-                        </Menu.Items>
-                      </Transition>
-                    </Menu>
-
-
-
-
-
+                    <DropdownRelatorios />
                   </div>
                 </div>
 
               </div>
 
+              {/* NOTIFICATIONS ANR PROFILE BUTTONS */}
               <div className="hidden md:block">
                 <div className="ml-4 flex items-center md:ml-6">
 
@@ -261,13 +277,22 @@ export default function Nav() {
                 D A S H B O A R D
               </a>
 
-              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Cep
-              </a>
+              <p>
+                <DropdownMotoristas />
+              </p>
 
-              <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                Outro
-              </a>
+              <p>
+                <DropdownVeiculos />
+              </p>
+
+              <p>
+                <DropdownCargas />
+              </p>
+
+              <p>
+                <DropdownRelatorios />
+              </p>
+
             </div>
             
             <div className="pt-4 pb-3 border-t border-gray-700">
@@ -280,8 +305,12 @@ export default function Nav() {
                   />
                 </div>
                 <div className="ml-3">
-                  <div className="text-base font-medium leading-none text-white">Diego Fernandes</div>
-                  <div className="text-sm font-medium leading-none text-gray-400">diego@rocketseat.com.br</div>
+                  <div className="text-base font-medium leading-none text-white">
+                    Developer ANR
+                  </div>
+                  <div className="text-sm font-medium leading-none text-gray-400">
+                    dev@anrsistemas.com.br
+                  </div>
                 </div>
                 <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                   <span className="sr-only">View notifications</span>
