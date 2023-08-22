@@ -27,12 +27,26 @@ export default function Cargas() {
             <div className="flex gap-4">
               <div className="flex-1">
                 <label htmlFor="veiculo" className={labelStyles}>Veiculo:</label>
-                <input id="veiculo" name="veiculo" className={inputStyles} type="text" />
+                <select id="veiculo" name="veiculo" className={inputStyles}>
+                  <option value=""></option>
+                  <option value="Volvo / FH / EDR6354">Volvo / FH / EDR6354</option>
+                  <option value="Mercedes-Benz / Actros / RER1936">Mercedes-Benz / Actros / RER1936</option>
+                  <option value="Scania / R450 / AWS6373">Scania / R450 / AWS6373</option>
+                  <option value="Man / TGX / mns5252">Man / TGX / mns5252</option>
+                  <option value="Iveco / Stralis / SLL3542">Iveco / Stralis / SLL3542</option>
+                </select>
               </div>
 
               <div className="flex-1">
                 <label htmlFor="motorista" className={labelStyles}>Motorista:</label>
-                <input id="motorista" name="motorista" className={inputStyles} type="text" />
+                <select id="motorista" name="motorista" className={inputStyles}>
+                  <option value=""></option>
+                  <option value="Roberto Silva">Roberto Silva</option>
+                  <option value="Marcelo Souza">Marcelo Souza</option>
+                  <option value="Antonio Marques">Antonio Marques</option>
+                  <option value="Adriano monteiro">Adriano monteiro</option>
+                  <option value="Acacio de Farias">Acacio de Farias</option>
+                </select>
               </div>
             </div>
 
