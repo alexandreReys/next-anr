@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
-import Motoristas from '../components/Motoristas'
+import Motoristas from '../components/motoristas/form'
 import Nav from '../components/nav'
 
 export default function MotoristasPage() {
