@@ -1,6 +1,3 @@
-// import axios from "axios";
-// import { useCallback, useEffect } from "react";
-// import { zipCodeMask } from "@/constants/masks";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { schemaForm } from "./schema";
@@ -18,7 +15,7 @@ export const useMotorista = () => {
     mode: 'all',
     resolver: zodResolver(schemaForm),
     defaultValues: {
-      data: {
+      motoristaData: {
         id: '',
         nome: '',
         sobrenome: '',
