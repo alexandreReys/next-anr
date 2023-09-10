@@ -3,16 +3,16 @@ import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
 import Nav from '../components/nav'
-import Cep from '../components/cep'
+import Test from '../components/Test'
 
 export default function Dashboard() {
   return (
     <div>
       <Head>
-        <title>Cep</title>
+        <title>Test</title>
       </Head>
       <Nav />
-      <Cep />
+      <Test />
     </div>
   )
 }
