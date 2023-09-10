@@ -4,7 +4,7 @@ import axios from "axios";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as masks from "@/constants/masks";
 import { schemaForm } from "./schema";
-import { motoristaProps, FormProps } from "./types";
+import { AddressProps, FormProps } from "./types";
 
 export const useMotorista = () => {
   const labelStyles = 'w-30 inline-block mt-2 font-bold';
