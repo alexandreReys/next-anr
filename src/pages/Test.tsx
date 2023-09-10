@@ -3,7 +3,7 @@ import { parseCookies } from 'nookies'
 import { GetServerSideProps } from 'next'
 import { getAPIClient } from '../services/axios'
 import Nav from '../components/nav'
-import Test from '../components/test'
+import Test from '../components/Test'
 
 export default function Dashboard() {
   return (
